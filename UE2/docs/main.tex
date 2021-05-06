@@ -1,0 +1,63 @@
+\documentclass[12pt,letterpaper]{article}
+\title{\"Ubung 2}
+\author{Shehata Abd El Rahaman}
+\date{}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{makecell, booktabs, caption}
+\usepackage{caption}
+\usepackage{subcaption}
+% \usepackage[section]{placeins}
+\usepackage{placeins}
+\usepackage{subfiles}
+\usepackage{import}
+
+\renewcommand\theadfont{\normalsize\bfseries}
+\renewcommand{\familydefault}{\sfdefault}
+\vspace{6pt}
+% \setcounter{secnumdepth}{4}
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries\centering}{\centering\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{2.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\makeindex
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\clearpage
+\pagebreak
+\section{VLANs}
+\import{Vlan/}{index}
+\clearpage
+\pagebreak
+\section{Port Security}
+\import{Port Security/}{index}
+\clearpage
+\pagebreak
+\section{Link Aggregation}
+\import{Link Aggregation/}{index}
+
+% \section{VLANs}
+% \input{Vlan/index}
+% \section{Port Security}
+% \include{Port Security/index}
+% \section{Link Aggregation}
+% \include{Link Aggregation/index}
+
+% \section{VLANs}
+% \subfile{Vlan/index.tex}
+% \clearpage
+% \pagebreak
+% \section{Port Security}
+% \subfile{Port Security/index.tex}
+% \clearpage
+% \pagebreak
+% \section{Link Aggregation}
+% \subfile{Link Aggregation/index.tex}
+
+\end{document}

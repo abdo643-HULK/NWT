@@ -1,0 +1,46 @@
+\documentclass[12pt,letterpaper]{article}
+\title{\"Ubung 3}
+\author{Shehata Abd El Rahaman}
+\date{}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{makecell, booktabs, caption}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{subfiles}
+\usepackage{import}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+
+
+\renewcommand\theadfont{\normalsize\bfseries}
+\renewcommand{\familydefault}{\sfdefault}
+\vspace{6pt}
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries\centering}{\centering\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{2.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\makeindex
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\clearpage
+\pagebreak
+\section{Direktverbindungen}
+\import{direct/}{index}
+\clearpage
+\pagebreak
+\section{Statisches Routing}
+\import{inter_vlan_routing/}{index}
+\clearpage
+\pagebreak
+\section{Inter VLAN Routing}
+\import{static_routing/}{index}
+
+\end{document}
