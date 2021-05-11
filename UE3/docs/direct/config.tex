@@ -33,7 +33,86 @@ Das Programm befindet sich zur Sicherheit im zip folder.\\
     \includegraphics[width=\textwidth]{./img/config/frage1.png}
     \caption{Resultate der Berechnungen}
 \end{figure}
-\subsubsection{IPv6}
-\subsubsection{Endsysteme}
-\subsubsection{Frage 2}
+\pagebreak
 
+\subsubsection{IPv6}
+Die Router Interfaces wurden über die CLI im conf terminal eingestellt.In dem Modus wählt man das jeweilige Interface und stellt mit ``ipv6 address xxx/64'' die Adresse ein.\\
+Damit IPv6 Routing funktioniert muss im weiters im conf terminal des Routers IPv6 unicasting mit ``ipv6 unicast-routing'' aktiviert werden.\\
+Der Server wurde über die GUI engestellt.
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.7\textwidth,keepaspectratio]{./img/config/router_ipv6.png}
+        \caption{Router nach IPv6}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.4\textwidth,keepaspectratio]{./img/config/server.png}
+        \caption{Server}
+    \end{subfigure}
+\end{figure}
+
+
+\subsubsection{Endsysteme}
+Die PCs wurden über die GUI eingestellt.
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.85\textwidth,keepaspectratio]{./img/config/pc0.png}
+        \caption{Group 1 - PC1}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.85\textwidth,keepaspectratio]{./img/config/pc1.png}
+        \caption{Group 1 - PC2}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.88\textwidth,keepaspectratio]{./img/config/pc2.png}
+        \caption{Group 2 - PC1}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.88\textwidth,keepaspectratio]{./img/config/pc3.png}
+        \caption{Group 2 - PC2}
+    \end{subfigure}
+    \caption{IP-Config}
+\end{figure}
+\FloatBarrier
+\paragraph{Tests}
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.85\textwidth,keepaspectratio]{./img/config/test1.png}
+        \caption{Group 1 zu Group 2 und Server}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.85\textwidth,keepaspectratio]{./img/config/test2.png}
+        \caption{Group 2 zu Group 1 und Server}
+    \end{subfigure}
+    \caption{IPv4 Kommunikation}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.88\textwidth,keepaspectratio]{./img/config/test_ipv6.png}
+        \caption{Group 1 zu Group 2 ping}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=\textwidth,height=.88\textwidth,keepaspectratio]{./img/config/test_server.png}
+        \caption{Kommunikation zum Server über den Browser}
+    \end{subfigure}
+    \caption{IPv6 Kommunikation}
+\end{figure}
+\pagebreak
+
+\subsubsection{Frage 2}
+\paragraph{Frage}
+Warum funktioniert das, obwohl noch keine Routen gesetzt wurden?
+\paragraph{Antwort}
+Weil der Router direkt mit den Systemen verbunden ist, erkennt er die Subnet Id automatisch und kann die Adressen routen.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth,height=.4\textwidth,keepaspectratio]{./img/config/ip_route.png}
+    \caption{IPv4 Routes des Routers}
+    \includegraphics[width=\textwidth,height=.5\textwidth,keepaspectratio]{./img/config/ipv6_route.png}
+    \caption{IPv6 Routes des Routers}
+\end{figure}
