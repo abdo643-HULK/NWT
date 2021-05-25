@@ -1,0 +1,74 @@
+\documentclass[12pt,letterpaper]{article}
+\title{\"Ubung 4}
+\author{Shehata Abd El Rahaman}
+\date{}
+\usepackage[german]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{makecell, booktabs, caption}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{subfiles}
+\usepackage{import}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\lstset{
+  basicstyle=\fontsize{9}{10}\selectfont\ttfamily
+}
+\renewcommand\theadfont{\normalsize\bfseries}
+\renewcommand{\familydefault}{\sfdefault}
+\vspace{6pt}
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries\centering}{\centering\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{2.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\makeindex
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\clearpage
+\pagebreak
+\section{Automatische Adressvergabe}
+\import{dhcp_slaac/}{index}
+\clearpage
+\pagebreak
+\section{Port Mirroring und Sniffing}
+\import{mirroring_sniffing/}{index}
+\clearpage
+\pagebreak
+\section{Wireshark Traces}
+\import{wireshark/}{index}
+
+\end{document}

@@ -1,0 +1,23 @@
+\subsubsection{Konfiguration von Ü3}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth,height=.34\textwidth,keepaspectratio]{./img/build.png}
+    \caption{Netz}
+\end{figure}
+\subsubsection{Ipv6 Addressen der Subinterfaces}
+\begin{lstlisting}
+Router>en
+Router#conf t
+Router(config)#ipv6 unicast-routing 
+Router(config)#int gig0/0.1
+Router(config-subif)#ipv6 address 2a0c:2343:0:1::254/64
+Router(config-subif)#exit
+Router(config)#int gig0/0.2
+Router(config-subif)#ipv6 address 2a0c:2343:0:2::254/64
+Router(config-subif)#end
+\end{lstlisting}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth,height=.25\textwidth,keepaspectratio]{./img/ipv6_router.png}
+    \caption{Running Config nach Ipv6 Einstellung}
+\end{figure}
